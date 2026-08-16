@@ -9,7 +9,7 @@
 
 @layer utilities {
   .text-outline {
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px white;
     color: transparent;
   }
 }
