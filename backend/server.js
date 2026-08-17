@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import { sendContactEmail } from "./utils/mailer.js";
+import { sendContactEmail, sendContactEmailResend } from "./utils/mailer.js";
 
 dotenv.config();
 
@@ -54,8 +54,8 @@ app.post("/api/contact", async (req, res) => {
 		const newMessage = new Message({ name, email, message });
 		await newMessage.save();
 
-		// Send email notification (we don't wait for it so the user gets a fast response)
-		sendContactEmail(name, email, message);
+		// Send email notification using Resend
+		sendContactEmailResend(name, email, message);
 
 		res.status(201).json({
 			success: true,
