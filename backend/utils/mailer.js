@@ -11,8 +11,8 @@ export const sendContactEmail = async (name, email, message) => {
 		});
 
 		const mailOptions = {
-			from: process.env.EMAIL_USER,
-			to: process.env.EMAIL_USER,
+			from: `"devXbhabani-portfolio" <${process.env.EMAIL_USER}>`,
+			to: process.env.TO_EMAIL_USER,
 			subject: `New Portfolio Message from ${name}`,
 			text: `You have a new message from your portfolio!\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
 		};
