@@ -9,8 +9,15 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+const frontendUrl = process.env.FRONTEND_URL || '';
+const allowedOrigins = [
+  frontendUrl,
+  frontendUrl.replace(/\/$/, ''), // Same URL but without trailing slash
+  'http://localhost:5173'
+].filter(Boolean);
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
+  origin: allowedOrigins,
   credentials: true
 }));
 app.use(express.json());

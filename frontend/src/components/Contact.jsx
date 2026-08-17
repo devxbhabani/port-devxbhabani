@@ -19,14 +19,12 @@ const Contact = () => {
 		e.preventDefault();
 		setStatus("Sending...");
 		try {
-			const res = await fetch(
-				`${import.meta.env.VITE_API_URL}/api/contact`,
-				{
-					method: "POST",
-					headers: { "Content-Type": "application/json" },
-					body: JSON.stringify(formData),
-				},
-			);
+			const apiUrl = import.meta.env.VITE_API_URL.replace(/\/$/, "");
+			const res = await fetch(`${apiUrl}/api/contact`, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(formData),
+			});
 			const data = await res.json();
 			if (data.success) {
 				setStatus("Message sent successfully!");
