@@ -35,7 +35,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export const sendContactEmailResend = async (name, email, message) => {
 	try {
 		const data = await resend.emails.send({
-			from: `"devXbhabani-portfolio" <${process.env.EMAIL_USER}>`, // You can change this to your verified domain later
+			from: '"devXbhabani-portfolio" <onboarding@resend.dev>', // MUST be this unless you own a custom domain
 			to: process.env.TO_EMAIL_USER,
 			subject: `New Portfolio Message from ${name}`,
 			html: `
