@@ -64,7 +64,7 @@ const AboutMe = () => {
 					>
 						<div className="flex flex-col gap-1">
 							<span className="text-4xl md:text-5xl font-black text-black">
-								10+
+								17+
 							</span>
 							<span className="text-xs uppercase tracking-widest text-zinc-400 font-bold">
 								Projects Built
