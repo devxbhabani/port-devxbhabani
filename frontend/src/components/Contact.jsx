@@ -19,7 +19,7 @@ const Contact = () => {
 		e.preventDefault();
 		setStatus("Sending...");
 		try {
-			const apiUrl = import.meta.env.API_URL.replace(/\/$/, "");
+			const apiUrl = import.meta.env.VITE_API_URL.replace(/\/$/, "");
 			const res = await fetch(`${apiUrl}/api/contact`, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
