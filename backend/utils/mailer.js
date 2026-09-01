@@ -28,12 +28,13 @@ export const sendContactEmail = async (name, email, message) => {
 
 import { Resend } from "resend";
 
-// Initialize Resend with your API key
 // (Make sure to add RESEND_API_KEY to your .env file and Render dashboard)
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendContactEmailResend = async (name, email, message) => {
 	try {
+		// Initialize inside the function to ensure process.env is fully loaded first
+		const resend = new Resend(process.env.RESEND_API_KEY);
+
 		const data = await resend.emails.send({
 			from: '"devXbhabani-portfolio" <onboarding@resend.dev>', // MUST be this unless you own a custom domain
 			to: process.env.TO_EMAIL_USER,
