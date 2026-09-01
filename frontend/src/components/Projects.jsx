@@ -133,10 +133,38 @@ const projectData = [
 
 const Projects = () => {
 	const [selectedProject, setSelectedProject] = useState(null);
+	const [privateModal, setPrivateModal] = useState(false);
+	const [checkingRepo, setCheckingRepo] = useState(null);
+
+	const handleGithubClick = async (e, url) => {
+		e.preventDefault();
+		e.stopPropagation();
+		
+		if (url === "#") return;
+
+		setCheckingRepo(url);
+		const match = url.match(/github\.com\/([^/]+)\/([^/]+)/);
+		
+		if (match) {
+			try {
+				const res = await fetch(`https://api.github.com/repos/${match[1]}/${match[2]}`);
+				if (res.status === 404) {
+					setPrivateModal(true);
+					setCheckingRepo(null);
+					return;
+				}
+			} catch (err) {
+				console.error("Error checking github repo:", err);
+			}
+		}
+		
+		setCheckingRepo(null);
+		window.open(url, "_blank");
+	};
 
 	// Lock body scroll when modal is open
 	useEffect(() => {
-		if (selectedProject) {
+		if (selectedProject || privateModal) {
 			document.body.style.overflow = "hidden";
 		} else {
 			document.body.style.overflow = "auto";
@@ -144,7 +172,7 @@ const Projects = () => {
 		return () => {
 			document.body.style.overflow = "auto";
 		};
-	}, [selectedProject]);
+	}, [selectedProject, privateModal]);
 
 	return (
 		<section
@@ -199,15 +227,16 @@ const Projects = () => {
 								</div>
 								<div className="absolute top-6 right-6 z-20 flex gap-2">
 									{project.github !== "#" && (
-										<a
-											href={project.github}
-											target="_blank"
-											rel="noreferrer"
-											onClick={(e) => e.stopPropagation()}
+										<button
+											onClick={(e) => handleGithubClick(e, project.github)}
 											className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-black hover:bg-black hover:text-white transition-all shadow-lg"
 										>
-											<GithubIcon />
-										</a>
+											{checkingRepo === project.github ? (
+												<div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+											) : (
+												<GithubIcon />
+											)}
+										</button>
 									)}
 									{project.live !== "#" && (
 										<a
@@ -329,12 +358,19 @@ const Projects = () => {
 												<h4 className="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-6">Project Links</h4>
 												<div className="flex flex-col gap-4">
 													{selectedProject.github !== "#" && (
-														<a href={selectedProject.github} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-zinc-200 group">
+														<button 
+															onClick={(e) => handleGithubClick(e, selectedProject.github)} 
+															className="w-full flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-zinc-200 group"
+														>
 															<div className="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-900 group-hover:bg-black group-hover:text-white transition-colors">
-																<GithubIcon />
+																{checkingRepo === selectedProject.github ? (
+																	<div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+																) : (
+																	<GithubIcon />
+																)}
 															</div>
 															<span className="font-bold text-zinc-900">View Source</span>
-														</a>
+														</button>
 													)}
 													{selectedProject.live !== "#" && (
 														<a href={selectedProject.live} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-4 bg-black rounded-xl shadow-sm hover:shadow-lg transition-shadow group">
@@ -355,6 +391,42 @@ const Projects = () => {
 									</div>
 								</div>
 							</div>
+						</motion.div>
+					</motion.div>
+				)}
+			</AnimatePresence>
+			<AnimatePresence>
+				{privateModal && (
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
+						onClick={(e) => {
+							e.stopPropagation();
+							setPrivateModal(false);
+						}}
+					>
+						<motion.div
+							initial={{ scale: 0.9, opacity: 0 }}
+							animate={{ scale: 1, opacity: 1 }}
+							exit={{ scale: 0.9, opacity: 0 }}
+							className="bg-white rounded-3xl p-8 max-w-sm w-full shadow-2xl text-center relative border border-zinc-100"
+							onClick={(e) => e.stopPropagation()}
+						>
+							<div className="w-16 h-16 bg-red-50 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+							</div>
+							<h3 className="text-2xl font-black uppercase tracking-tighter text-zinc-900 mb-2">Repository Private</h3>
+							<p className="text-zinc-500 font-medium mb-8">
+								The source code for this project is currently private and cannot be viewed publicly.
+							</p>
+							<button 
+								onClick={() => setPrivateModal(false)}
+								className="w-full py-4 bg-black text-white font-bold tracking-widest uppercase rounded-xl hover:bg-zinc-800 transition-colors cursor-pointer"
+							>
+								Understood
+							</button>
 						</motion.div>
 					</motion.div>
 				)}
