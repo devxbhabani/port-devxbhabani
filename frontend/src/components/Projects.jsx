@@ -96,15 +96,15 @@ const projectData = [
 	{
 		id: 5,
 		title: "AyuScan: ECG 1D-CNN Model",
-		desc: "Deep learning 1D-CNN model designed for real-time ECG signal classification and cardiac anomaly detection.",
-		longDesc: "AyuScan's core artificial intelligence component. This deep learning model utilizes a 1-Dimensional Convolutional Neural Network (1D-CNN) built with TensorFlow and Keras to process raw electrocardiogram (ECG) time-series data. It is trained to detect microscopic cardiac anomalies in real-time, functioning as an early warning system for arrhythmias.",
+		desc: "Real-time ECG deep learning model integrated with embedded hardware to analyze continuous cardiac graphs and trigger instant anomaly warnings.",
+		longDesc: "AyuScan's core AI component seamlessly interfaces with custom embedded hardware. As the physical device captures a patient's continuous electrocardiogram (ECG) graph, it streams the raw time-series data directly to this 1D-CNN model. The model analyzes the incoming signal stream on the fly, detecting microscopic cardiac anomalies (like Arrhythmia or AFib). When a critical anomaly is detected, it instantly fires a warning trigger back to the system dashboard for immediate medical intervention.",
 		features: [
-			"Custom 1D-CNN architecture optimized for time-series data",
-			"Real-time signal noise reduction and artifact filtering",
-			"High-accuracy anomaly detection (Arrhythmia, AFib)",
-			"Lightweight model weights optimized for edge deployment"
+			"Continuous real-time ECG graph streaming and inference",
+			"Instantaneous anomaly warning triggers for medical staff",
+			"Bidirectional communication with embedded hardware components",
+			"Custom 1D-CNN architecture optimized for time-series data"
 		],
-		challenges: "Raw ECG data is notoriously noisy due to muscle movement and baseline wander. Before training the model, we had to engineer a robust digital signal processing (DSP) pipeline using Butterworth bandpass filters to isolate the clean QRS complex.",
+		challenges: "Raw ECG data streamed from the hardware is notoriously noisy due to muscle movement. Before feeding the live continuous graph to the model, we engineered a robust digital signal processing (DSP) pipeline using Butterworth bandpass filters to isolate the clean QRS complex without introducing latency.",
 		image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000",
 		tags: ["PYTHON", "TENSORFLOW", "KERAS", "SIGNAL PROCESSING"],
 		github: "https://github.com/devxbhabani/AyuScan",
