@@ -25,14 +25,16 @@ const projectData = [
 		id: 1,
 		title: "Restaurant POS System",
 		desc: "A real-time, full-stack Restaurant POS and secure QR-Code Menu Ordering System.",
-		longDesc: "A comprehensive point-of-sale system designed specifically for modern restaurants. It seamlessly bridges the gap between kitchen staff and customers by offering a digital QR-code ordering system alongside a robust admin dashboard for order management and analytics.",
+		longDesc:
+			"A comprehensive point-of-sale system designed specifically for modern restaurants. It seamlessly bridges the gap between kitchen staff and customers by offering a digital QR-code ordering system alongside a robust admin dashboard for order management and analytics.",
 		features: [
 			"Real-time order synchronization using Socket.io",
 			"Secure QR-code generation for tableside ordering",
 			"Comprehensive inventory management",
-			"Role-based access control (Admin, Waitstaff, Kitchen)"
+			"Role-based access control (Admin, Waitstaff, Kitchen)",
 		],
-		challenges: "Ensuring zero latency between the customer placing an order via their phone and the kitchen display system receiving it. This was solved by migrating from standard REST polling to a fully bidirectional WebSocket architecture.",
+		challenges:
+			"Ensuring zero latency between the customer placing an order via their phone and the kitchen display system receiving it. This was solved by migrating from standard REST polling to a fully bidirectional WebSocket architecture.",
 		image: "/projects/pos.png",
 		tags: ["React", "Node.js", "Express", "Socket.io", "MongoDB"],
 		github: "https://github.com/devxbhabani/Restaurant-POS-System",
@@ -43,14 +45,16 @@ const projectData = [
 		id: 2,
 		title: "movieLand",
 		desc: "MERN stack web application for discovering movies and web series.",
-		longDesc: "movieLand is a sleek, responsive platform for cinephiles to discover, rate, and curate their favorite films and series. Featuring a fluid UI, dark mode aesthetics, and deep integration with external movie databases to fetch the latest trailers and ratings.",
+		longDesc:
+			"movieLand is a sleek, responsive platform for cinephiles to discover, rate, and curate their favorite films and series. Featuring a fluid UI, dark mode aesthetics, and deep integration with external movie databases to fetch the latest trailers and ratings.",
 		features: [
 			"Dynamic search and filtering by genre and rating",
 			"User authentication and personalized watchlists",
 			"Interactive movie carousels with smooth animations",
-			"Responsive design optimized for both mobile and desktop"
+			"Responsive design optimized for both mobile and desktop",
 		],
-		challenges: "Handling the vast amount of data coming from the external movie API while keeping the initial page load extremely fast. We implemented server-side pagination and aggressive client-side caching to maintain a buttery smooth user experience.",
+		challenges:
+			"Handling the vast amount of data coming from the external movie API while keeping the initial page load extremely fast. We implemented server-side pagination and aggressive client-side caching to maintain a buttery smooth user experience.",
 		image: "/projects/movieland.png",
 		tags: ["React", "Node.js", "Express", "MongoDB"],
 		github: "https://github.com/devxbhabani/movieLand",
@@ -61,17 +65,19 @@ const projectData = [
 		id: 3,
 		title: "MakeLyft",
 		desc: "Enterprise carpooling platform enabling employees to securely discover and share rides.",
-		longDesc: "MakeLyft was developed as a solution to the daily commuting challenges faced by corporate employees, such as high transportation costs, traffic congestion, and environmental impact. This Enterprise Carpooling Platform allows employees from registered organizations to seamlessly coordinate shared transportation, track journeys in real-time, and handle payments securely.",
+		longDesc:
+			"MakeLyft was developed as a solution to the daily commuting challenges faced by corporate employees, such as high transportation costs, traffic congestion, and environmental impact. This Enterprise Carpooling Platform allows employees from registered organizations to seamlessly coordinate shared transportation, track journeys in real-time, and handle payments securely.",
 		features: [
 			"Automated ride matching based on overlapping routes and schedules",
 			"Real-time journey tracking and mapping integration",
 			"Secure in-app payment handling and split fares",
-			"Organization-based user verification and access control"
+			"Organization-based user verification and access control",
 		],
-		challenges: "Implementing a highly efficient geospatial matching algorithm that could accurately pair riders and drivers in real-time based on live traffic data and strict schedule constraints.",
+		challenges:
+			"Implementing a highly efficient geospatial matching algorithm that could accurately pair riders and drivers in real-time based on live traffic data and strict schedule constraints.",
 		image: "/projects/makelyft.jpg",
 		tags: ["React", "Node.js", "Express", "PostgreSQL", "WebSockets"],
-		github: "https://github.com/Kashcx-dev/MakeLyft",
+		github: "https://github.com/devxbhabani/makelyft",
 		live: "#",
 		year: "2026",
 	},
@@ -79,14 +85,16 @@ const projectData = [
 		id: 4,
 		title: "Image Based Calorie Estimator",
 		desc: "A website to estimate calories from image.",
-		longDesc: "Leveraging the power of computer vision and deep learning, this application allows users to upload a photo of their meal and instantly receive an estimated calorie breakdown. Built with a Python/Flask backend utilizing PyTorch and OpenCV for image processing.",
+		longDesc:
+			"Leveraging the power of computer vision and deep learning, this application allows users to upload a photo of their meal and instantly receive an estimated calorie breakdown. Built with a Python/Flask backend utilizing PyTorch and OpenCV for image processing.",
 		features: [
 			"YOLO-based object detection for food items",
 			"Volume estimation algorithms using reference scaling",
 			"Automated nutritional value calculation",
-			"Sleek TailwindCSS frontend interface"
+			"Sleek TailwindCSS frontend interface",
 		],
-		challenges: "Accurately estimating the physical volume of food from a 2D image is inherently difficult. We tackled this by requiring a standard reference object (like a coin or card) in the frame, allowing the OpenCV pipeline to calculate depth and scale dynamically.",
+		challenges:
+			"Accurately estimating the physical volume of food from a 2D image is inherently difficult. We tackled this by requiring a standard reference object (like a coin or card) in the frame, allowing the OpenCV pipeline to calculate depth and scale dynamically.",
 		image: "/projects/calorie-estimator.png",
 		tags: ["REACT", "TAILWINDCSS", "PYTHON", "FLASK", "PYTORCH", "OPENCV"],
 		github: "https://github.com/devxbhabani/Image-Based-Calorie-Estimator",
@@ -97,14 +105,16 @@ const projectData = [
 		id: 5,
 		title: "AyuScan: ECG 1D-CNN Model",
 		desc: "Real-time ECG deep learning model integrated with embedded hardware to analyze continuous cardiac graphs and trigger instant anomaly warnings.",
-		longDesc: "AyuScan's core AI component seamlessly interfaces with custom embedded hardware. As the physical device captures a patient's continuous electrocardiogram (ECG) graph, it streams the raw time-series data directly to this 1D-CNN model. The model analyzes the incoming signal stream on the fly, detecting microscopic cardiac anomalies (like Arrhythmia or AFib). When a critical anomaly is detected, it instantly fires a warning trigger back to the system dashboard for immediate medical intervention.",
+		longDesc:
+			"AyuScan's core AI component seamlessly interfaces with custom embedded hardware. As the physical device captures a patient's continuous electrocardiogram (ECG) graph, it streams the raw time-series data directly to this 1D-CNN model. The model analyzes the incoming signal stream on the fly, detecting microscopic cardiac anomalies (like Arrhythmia or AFib). When a critical anomaly is detected, it instantly fires a warning trigger back to the system dashboard for immediate medical intervention.",
 		features: [
 			"Continuous real-time ECG graph streaming and inference",
 			"Instantaneous anomaly warning triggers for medical staff",
 			"Bidirectional communication with embedded hardware components",
-			"Custom 1D-CNN architecture optimized for time-series data"
+			"Custom 1D-CNN architecture optimized for time-series data",
 		],
-		challenges: "Raw ECG data streamed from the hardware is notoriously noisy due to muscle movement. Before feeding the live continuous graph to the model, we engineered a robust digital signal processing (DSP) pipeline using Butterworth bandpass filters to isolate the clean QRS complex without introducing latency.",
+		challenges:
+			"Raw ECG data streamed from the hardware is notoriously noisy due to muscle movement. Before feeding the live continuous graph to the model, we engineered a robust digital signal processing (DSP) pipeline using Butterworth bandpass filters to isolate the clean QRS complex without introducing latency.",
 		image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000",
 		tags: ["PYTHON", "TENSORFLOW", "KERAS", "SIGNAL PROCESSING"],
 		github: "https://github.com/devxbhabani/AyuScan",
@@ -115,14 +125,16 @@ const projectData = [
 		id: 6,
 		title: "AyuScan: SpO2 Embedded Integration",
 		desc: "Integration of an SpO2 GRU trend analysis model with an ESP32 embedded system for continuous pulse oximetry monitoring.",
-		longDesc: "The hardware bridge for the AyuScan ecosystem. This project involved writing low-level C++ firmware for the ESP32 microcontroller to interface with photoplethysmography (PPG) sensors. The hardware continuously streams raw red and infrared light data over WebSockets to a Python backend, where a Gated Recurrent Unit (GRU) model predicts SpO2 trends.",
+		longDesc:
+			"The hardware bridge for the AyuScan ecosystem. This project involved writing low-level C++ firmware for the ESP32 microcontroller to interface with photoplethysmography (PPG) sensors. The hardware continuously streams raw red and infrared light data over WebSockets to a Python backend, where a Gated Recurrent Unit (GRU) model predicts SpO2 trends.",
 		features: [
 			"ESP32 firmware written in C++ for I2C sensor communication",
 			"Ultra-low latency WebSocket data streaming (8080)",
 			"Integration with a Python backend running GRU prediction models",
-			"Automated hardware GPIO alerts via Raspberry Pi 5"
+			"Automated hardware GPIO alerts via Raspberry Pi 5",
 		],
-		challenges: "Maintaining a stable, high-frequency data stream (100Hz+) over a local wireless network without packet dropping. We migrated from standard HTTP to raw WebSockets and implemented a circular buffer on the ESP32 to prevent memory overflow during network spikes.",
+		challenges:
+			"Maintaining a stable, high-frequency data stream (100Hz+) over a local wireless network without packet dropping. We migrated from standard HTTP to raw WebSockets and implemented a circular buffer on the ESP32 to prevent memory overflow during network spikes.",
 		image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2000",
 		tags: ["C++", "PYTHON", "ESP32", "WEBSOCKETS", "HARDWARE"],
 		github: "https://github.com/devxbhabani/AyuScan",
@@ -139,15 +151,17 @@ const Projects = () => {
 	const handleGithubClick = async (e, url) => {
 		e.preventDefault();
 		e.stopPropagation();
-		
+
 		if (url === "#") return;
 
 		setCheckingRepo(url);
 		const match = url.match(/github\.com\/([^/]+)\/([^/]+)/);
-		
+
 		if (match) {
 			try {
-				const res = await fetch(`https://api.github.com/repos/${match[1]}/${match[2]}`);
+				const res = await fetch(
+					`https://api.github.com/repos/${match[1]}/${match[2]}`,
+				);
 				if (res.status === 404) {
 					setPrivateModal(true);
 					setCheckingRepo(null);
@@ -157,7 +171,7 @@ const Projects = () => {
 				console.error("Error checking github repo:", err);
 			}
 		}
-		
+
 		setCheckingRepo(null);
 		window.open(url, "_blank");
 	};
@@ -187,7 +201,9 @@ const Projects = () => {
 					</h2>
 					<div className="mt-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
 						<p className="text-zinc-500 text-lg md:text-xl max-w-md font-medium">
-							Exploring the intersection of software, artificial intelligence, and hardware through purpose-driven engineering.
+							Exploring the intersection of software, artificial
+							intelligence, and hardware through purpose-driven
+							engineering.
 						</p>
 						<div className="flex items-center gap-2 text-sm font-bold tracking-widest text-zinc-400 uppercase">
 							<span className="w-12 h-px bg-zinc-200"></span>
@@ -228,7 +244,9 @@ const Projects = () => {
 								<div className="absolute top-6 right-6 z-20 flex gap-2">
 									{project.github !== "#" && (
 										<button
-											onClick={(e) => handleGithubClick(e, project.github)}
+											onClick={(e) =>
+												handleGithubClick(e, project.github)
+											}
 											className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-black hover:bg-black hover:text-white transition-all shadow-lg"
 										>
 											{checkingRepo === project.github ? (
@@ -250,7 +268,7 @@ const Projects = () => {
 										</a>
 									)}
 								</div>
-								
+
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
 							</div>
 							<div className="flex justify-between items-start">
@@ -292,7 +310,11 @@ const Projects = () => {
 							initial={{ y: 50, opacity: 0, scale: 0.95 }}
 							animate={{ y: 0, opacity: 1, scale: 1 }}
 							exit={{ y: 20, opacity: 0, scale: 0.95 }}
-							transition={{ type: "spring", damping: 25, stiffness: 300 }}
+							transition={{
+								type: "spring",
+								damping: 25,
+								stiffness: 300,
+							}}
 							className="relative w-full max-w-5xl max-h-[90vh] bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col"
 							onClick={(e) => e.stopPropagation()}
 						>
@@ -304,11 +326,14 @@ const Projects = () => {
 								<X size={24} />
 							</button>
 
-							<div className="overflow-y-auto overflow-x-hidden flex-1 no-scrollbar" data-lenis-prevent="true">
+							<div
+								className="overflow-y-auto overflow-x-hidden flex-1 no-scrollbar"
+								data-lenis-prevent="true"
+							>
 								{/* Header Image */}
 								<div className="relative w-full h-[40vh] md:h-[50vh] bg-zinc-900">
-									<img 
-										src={selectedProject.image} 
+									<img
+										src={selectedProject.image}
 										alt={selectedProject.title}
 										className="w-full h-full object-cover opacity-80"
 									/>
@@ -316,7 +341,10 @@ const Projects = () => {
 									<div className="absolute bottom-8 left-8 right-8">
 										<div className="flex flex-wrap gap-2 mb-4">
 											{selectedProject.tags.map((tag) => (
-												<span key={tag} className="px-3 py-1 bg-white/10 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest rounded-full border border-white/20">
+												<span
+													key={tag}
+													className="px-3 py-1 bg-white/10 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest rounded-full border border-white/20"
+												>
 													{tag}
 												</span>
 											))}
@@ -331,22 +359,35 @@ const Projects = () => {
 								<div className="p-8 md:p-12 lg:p-16 bg-white">
 									<div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 										<div className="lg:col-span-2">
-											<h3 className="text-xl font-bold uppercase tracking-widest text-zinc-400 mb-4 border-b border-zinc-100 pb-4">Overview</h3>
+											<h3 className="text-xl font-bold uppercase tracking-widest text-zinc-400 mb-4 border-b border-zinc-100 pb-4">
+												Overview
+											</h3>
 											<p className="text-lg text-zinc-800 leading-relaxed font-medium mb-12">
 												{selectedProject.longDesc}
 											</p>
 
-											<h3 className="text-xl font-bold uppercase tracking-widest text-zinc-400 mb-4 border-b border-zinc-100 pb-4">Key Features</h3>
+											<h3 className="text-xl font-bold uppercase tracking-widest text-zinc-400 mb-4 border-b border-zinc-100 pb-4">
+												Key Features
+											</h3>
 											<ul className="space-y-4 mb-12">
-												{selectedProject.features.map((feature, i) => (
-													<li key={i} className="flex items-start gap-4">
-														<div className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2.5 shrink-0" />
-														<span className="text-zinc-700 text-lg">{feature}</span>
-													</li>
-												))}
+												{selectedProject.features.map(
+													(feature, i) => (
+														<li
+															key={i}
+															className="flex items-start gap-4"
+														>
+															<div className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2.5 shrink-0" />
+															<span className="text-zinc-700 text-lg">
+																{feature}
+															</span>
+														</li>
+													),
+												)}
 											</ul>
 
-											<h3 className="text-xl font-bold uppercase tracking-widest text-zinc-400 mb-4 border-b border-zinc-100 pb-4">Technical Challenge</h3>
+											<h3 className="text-xl font-bold uppercase tracking-widest text-zinc-400 mb-4 border-b border-zinc-100 pb-4">
+												Technical Challenge
+											</h3>
 											<p className="text-lg text-zinc-600 leading-relaxed italic border-l-4 border-red-600 pl-6">
 												"{selectedProject.challenges}"
 											</p>
@@ -355,37 +396,58 @@ const Projects = () => {
 										{/* Sidebar */}
 										<div className="flex flex-col gap-8">
 											<div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100">
-												<h4 className="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-6">Project Links</h4>
+												<h4 className="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-6">
+													Project Links
+												</h4>
 												<div className="flex flex-col gap-4">
 													{selectedProject.github !== "#" && (
-														<button 
-															onClick={(e) => handleGithubClick(e, selectedProject.github)} 
+														<button
+															onClick={(e) =>
+																handleGithubClick(
+																	e,
+																	selectedProject.github,
+																)
+															}
 															className="w-full flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-zinc-200 group"
 														>
 															<div className="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-900 group-hover:bg-black group-hover:text-white transition-colors">
-																{checkingRepo === selectedProject.github ? (
+																{checkingRepo ===
+																selectedProject.github ? (
 																	<div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
 																) : (
 																	<GithubIcon />
 																)}
 															</div>
-															<span className="font-bold text-zinc-900">View Source</span>
+															<span className="font-bold text-zinc-900">
+																View Source
+															</span>
 														</button>
 													)}
 													{selectedProject.live !== "#" && (
-														<a href={selectedProject.live} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-4 bg-black rounded-xl shadow-sm hover:shadow-lg transition-shadow group">
+														<a
+															href={selectedProject.live}
+															target="_blank"
+															rel="noreferrer"
+															className="flex items-center gap-3 p-4 bg-black rounded-xl shadow-sm hover:shadow-lg transition-shadow group"
+														>
 															<div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-colors">
 																<Globe size={18} />
 															</div>
-															<span className="font-bold text-white">Live Preview</span>
+															<span className="font-bold text-white">
+																Live Preview
+															</span>
 														</a>
 													)}
 												</div>
 											</div>
-											
+
 											<div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100">
-												<h4 className="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-2">Timeline</h4>
-												<p className="text-2xl font-black text-zinc-900 tracking-tighter">{selectedProject.year}</p>
+												<h4 className="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-2">
+													Timeline
+												</h4>
+												<p className="text-2xl font-black text-zinc-900 tracking-tighter">
+													{selectedProject.year}
+												</p>
 											</div>
 										</div>
 									</div>
@@ -415,13 +477,36 @@ const Projects = () => {
 							onClick={(e) => e.stopPropagation()}
 						>
 							<div className="w-16 h-16 bg-red-50 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
-								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="28"
+									height="28"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									strokeWidth="2.5"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								>
+									<rect
+										width="18"
+										height="11"
+										x="3"
+										y="11"
+										rx="2"
+										ry="2"
+									/>
+									<path d="M7 11V7a5 5 0 0 1 10 0v4" />
+								</svg>
 							</div>
-							<h3 className="text-2xl font-black uppercase tracking-tighter text-zinc-900 mb-2">Repository Private</h3>
+							<h3 className="text-2xl font-black uppercase tracking-tighter text-zinc-900 mb-2">
+								Repository Private
+							</h3>
 							<p className="text-zinc-500 font-medium mb-8">
-								The source code for this project is currently private and cannot be viewed publicly.
+								The source code for this project is currently private
+								and cannot be viewed publicly.
 							</p>
-							<button 
+							<button
 								onClick={() => setPrivateModal(false)}
 								className="w-full py-4 bg-black text-white font-bold tracking-widest uppercase rounded-xl hover:bg-zinc-800 transition-colors cursor-pointer"
 							>
