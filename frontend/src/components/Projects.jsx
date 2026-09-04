@@ -75,7 +75,7 @@ const projectData = [
 		],
 		challenges:
 			"Implementing a highly efficient geospatial matching algorithm that could accurately pair riders and drivers in real-time based on live traffic data and strict schedule constraints.",
-		image: "/projects/makelyft.jpg",
+		image: "/projects/makelyft.png",
 		tags: ["React", "Node.js", "Express", "PostgreSQL", "WebSockets"],
 		github: "https://github.com/devxbhabani/makelyft",
 		live: "#",
