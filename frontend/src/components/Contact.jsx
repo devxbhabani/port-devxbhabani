@@ -71,7 +71,7 @@ const Contact = () => {
 							<FaGithub size={28} />
 						</a>
 						<a
-							href="https://instagram.com/bsjana_007"
+							href="https://instagram.com/bsjana_07"
 							target="_blank"
 							rel="noreferrer"
 							className="hover:text-white hover:scale-110 transition-all"
