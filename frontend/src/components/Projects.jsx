@@ -247,7 +247,7 @@ const Projects = () => {
 											onClick={(e) =>
 												handleGithubClick(e, project.github)
 											}
-											className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-black hover:bg-black hover:text-white transition-all shadow-lg"
+											className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-black hover:bg-black hover:text-white transition-all shadow-lg cursor-pointer"
 										>
 											{checkingRepo === project.github ? (
 												<div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
