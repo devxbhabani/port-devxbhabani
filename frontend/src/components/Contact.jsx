@@ -133,7 +133,7 @@ const Contact = () => {
 							</span>
 							<button
 								type="submit"
-								className="flex items-center justify-center w-16 h-16 rounded-full bg-white text-black hover:scale-110 transition-transform"
+								className="flex items-center justify-center w-16 h-16 rounded-full bg-white text-black hover:scale-110 transition-transform cursor-pointer"
 							>
 								<Send size={24} />
 							</button>
