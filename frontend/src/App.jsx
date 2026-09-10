@@ -10,7 +10,7 @@ import Contact from "./components/Contact";
 import SmoothScroll from "./components/SmoothScroll";
 import SplashScreen from "./components/SplashScreen";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
