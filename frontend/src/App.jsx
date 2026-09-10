@@ -9,6 +9,8 @@ import TechStack from "./components/TechStack";
 import Contact from "./components/Contact";
 import SmoothScroll from "./components/SmoothScroll";
 import SplashScreen from "./components/SplashScreen";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -44,6 +46,8 @@ function App() {
 					Bhabani Sankar Jana © {new Date().getFullYear()}
 				</div>
 			</div>
+			<Analytics />
+			<SpeedInsights />
 		</SmoothScroll>
 	);
 }
