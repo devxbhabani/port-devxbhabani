@@ -337,7 +337,7 @@ const Projects = () => {
 										alt={selectedProject.title}
 										className="w-full h-full object-cover opacity-80"
 									/>
-									<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+									<div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 									<div className="absolute bottom-8 left-8 right-8">
 										<div className="flex flex-wrap gap-2 mb-4">
 											{selectedProject.tags.map((tag) => (
@@ -463,7 +463,7 @@ const Projects = () => {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
-						className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
+						className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
 						onClick={(e) => {
 							e.stopPropagation();
 							setPrivateModal(false);
