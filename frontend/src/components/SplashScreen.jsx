@@ -55,9 +55,9 @@ const SplashScreen = ({ finishLoading }) => {
 				transition={{ duration: 1, delay: 0.4 }}
 				className="text-zinc-400 text-xs md:text-sm tracking-[0.3em] uppercase font-medium flex items-center gap-4"
 			>
-				<span className="text-white">DEVXBHABANI.DEV</span>
-				<span className="text-zinc-600 text-sm">©</span>
-				<span>EST. {new Date().getFullYear()}</span>
+				<span className="text-white select-none">DEVXBHABANI.DEV</span>
+				<span className="text-zinc-600 text-sm select-none">©</span>
+				<span className="select-none">EST. {new Date().getFullYear()}</span>
 			</motion.div>
 		</motion.div>
 	);
