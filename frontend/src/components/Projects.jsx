@@ -45,7 +45,7 @@ const projectData = [
 			"Supabase",
 		],
 		github: "https://github.com/devxbhabani/VibeLane",
-		live: "vibelanewear.vercel.apps",
+		live: "vibelanewear.vercel.app",
 		year: "2026",
 	},
 	{
