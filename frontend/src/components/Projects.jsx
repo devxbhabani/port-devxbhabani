@@ -23,6 +23,26 @@ const GithubIcon = () => (
 const projectData = [
 	{
 		id: 1,
+		title: "VibeLane",
+		desc: "High-fashion, brutalist lifestyle and e-commerce web application inspired by contemporary editorial fashion aesthetics.",
+		longDesc:
+			"VibeLane is a cutting-edge lifestyle and e-commerce web platform fusing brutalist UI with high-fashion editorial styling. Designed for peak responsiveness and seamless user engagement, it features fluid transitions, editorial product showcases, and a synchronized backend for real-time inventory and shopping experiences.",
+		features: [
+			"Brutalist editorial aesthetic powered by React 19 & Tailwind CSS v4",
+			"Silky smooth inertia scrolling with Lenis & Framer Motion transitions",
+			"Full-stack REST API built with Node.js & Express",
+			"Scalable database architecture and authentication with Supabase (PostgreSQL)",
+		],
+		challenges:
+			"Achieving ultra-smooth performance with heavy editorial media and complex scroll animations. Implemented optimized lazy-loading strategies, asset caching, and fine-tuned Lenis integration to ensure consistent 60+ FPS navigation across all viewport sizes.",
+		image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000",
+		tags: ["React 19", "Tailwind CSS", "Framer Motion", "Node.js", "Express", "Supabase"],
+		github: "https://github.com/devxbhabani/VibeLane",
+		live: "#",
+		year: "2026",
+	},
+	{
+		id: 2,
 		title: "Restaurant POS System",
 		desc: "A real-time, full-stack Restaurant POS and secure QR-Code Menu Ordering System.",
 		longDesc:
@@ -42,7 +62,7 @@ const projectData = [
 		year: "2026",
 	},
 	{
-		id: 2,
+		id: 3,
 		title: "movieLand",
 		desc: "MERN stack web application for discovering movies and web series.",
 		longDesc:
@@ -62,7 +82,7 @@ const projectData = [
 		year: "2026",
 	},
 	{
-		id: 3,
+		id: 4,
 		title: "MakeLyft",
 		desc: "Enterprise carpooling platform enabling employees to securely discover and share rides.",
 		longDesc:
@@ -79,26 +99,6 @@ const projectData = [
 		tags: ["React", "Node.js", "Express", "PostgreSQL", "WebSockets"],
 		github: "https://github.com/devxbhabani/makelyft",
 		live: "#",
-		year: "2026",
-	},
-	{
-		id: 4,
-		title: "Image Based Calorie Estimator",
-		desc: "A website to estimate calories from image.",
-		longDesc:
-			"Leveraging the power of computer vision and deep learning, this application allows users to upload a photo of their meal and instantly receive an estimated calorie breakdown. Built with a Python/Flask backend utilizing PyTorch and OpenCV for image processing.",
-		features: [
-			"YOLO-based object detection for food items",
-			"Volume estimation algorithms using reference scaling",
-			"Automated nutritional value calculation",
-			"Sleek TailwindCSS frontend interface",
-		],
-		challenges:
-			"Accurately estimating the physical volume of food from a 2D image is inherently difficult. We tackled this by requiring a standard reference object (like a coin or card) in the frame, allowing the OpenCV pipeline to calculate depth and scale dynamically.",
-		image: "/projects/calorie-estimator.png",
-		tags: ["REACT", "TAILWINDCSS", "PYTHON", "FLASK", "PYTORCH", "OPENCV"],
-		github: "https://github.com/devxbhabani/Image-Based-Calorie-Estimator",
-		live: "https://calorie-estimator-neon.vercel.app/",
 		year: "2026",
 	},
 	{

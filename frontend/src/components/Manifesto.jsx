@@ -26,7 +26,7 @@ const Manifesto = () => {
 	// "start start" -> starts when top of section hits top of viewport
 	// "end end" -> finishes when bottom of section hits bottom of viewport
 	const { scrollYProgress } = useScroll({
-		target: containerRef,
+		target: containerRef,	
 		offset: ["start start", "end end"],
 	});
 
