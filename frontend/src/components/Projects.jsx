@@ -35,8 +35,15 @@ const projectData = [
 		],
 		challenges:
 			"Achieving ultra-smooth performance with heavy editorial media and complex scroll animations. Implemented optimized lazy-loading strategies, asset caching, and fine-tuned Lenis integration to ensure consistent 60+ FPS navigation across all viewport sizes.",
-		image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000",
-		tags: ["React 19", "Tailwind CSS", "Framer Motion", "Node.js", "Express", "Supabase"],
+		image: "/projects/vibelane.png",
+		tags: [
+			"React 19",
+			"Tailwind CSS",
+			"Framer Motion",
+			"Node.js",
+			"Express",
+			"Supabase",
+		],
 		github: "https://github.com/devxbhabani/VibeLane",
 		live: "#",
 		year: "2026",
